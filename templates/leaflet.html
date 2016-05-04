@@ -21,28 +21,34 @@
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
     <script>
-     var mymap = L.map('mapid').setView([40.805, -74], 9);
+     var map = L.map('mapid').setView([40.805, -74], 9);
      
      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	 attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 	 maxZoom: 18,
 	 id: 'pavopax.01omlmkc',
 	 accessToken: 'pk.eyJ1IjoicGF2b3BheCIsImEiOiJjaW50Ym95YmExMTBvdTZseXpvcWJhbGRmIn0.TB33sIW0AjuQ7ywHQU_27A'
-     }).addTo(mymap);
+     }).addTo(map);
 
+     // data passed from app.py
+     data = {{data}}
 
-     var heat = L.heatLayer([
-	 [40.815, -74.1, 0.9], // lat, lng, intensity
-	 [40.815, -74.2, 0.9],
-	 [40.915, -74.3, 0.8],
-	 [40.915, -74.3, 0.8],
-	 [40.915, -74.3, 0.8],
-	 [40.915, -74.3, 0.8],
-	 [40.915, -74.3, 0.8],
-	 [40.915, -74.3, 0.8],
-	 [40.915, -74.3, 10.8],
-	 [40.915, -74.3, 0.8]
-	], {radius: 25}).addTo(mymap);
+     addressPoints = data.map(function (p) { return [p[0], p[1]]; });
+
+     var heat = L.heatLayer(addressPoints).addTo(map);
+     /*
+      *     var heat = L.heatLayer([
+      *	 [40.815, -74.1, 0.9], // lat, lng, intensity
+      *	 [40.815, -74.2, 0.9],
+      *	 [40.915, -74.3, 0.8],
+      *	 [40.915, -74.3, 0.8],
+      *	 [40.915, -74.3, 0.8],
+      *	 [40.915, -74.3, 0.8],
+      *	 [40.915, -74.3, 0.8],
+      *	 [40.915, -74.3, 0.8],
+      *	 [40.915, -74.3, 10.8],
+      *	 [40.915, -74.3, 0.8]
+      *	], {radius: 25}).addTo(map);*/
 
      var popup = L.popup();
 
@@ -50,10 +56,10 @@
 	 popup
              .setLatLng(e.latlng)
              .setContent("You clicked the map at " + e.latlng.toString())
-             .openOn(mymap);
+             .openOn(map);
      }
 
-     mymap.on('click', onMapClick);
+     map.on('click', onMapClick);
     </script>
     </body>
 </html>

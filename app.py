@@ -16,8 +16,7 @@ def index():
 @app.route('/leaflet')
 def leaflet():
 
-    # get some data:
-    nyc = nyc_current()
+    nyc = fetching.nyc_current()
 
     plotdf = nyc[['MonitoredVehicleJourney_PublishedLineName',
                   'MonitoredVehicleJourney_VehicleLocation_Latitude',
@@ -25,9 +24,11 @@ def leaflet():
 
     # add this for plot (may not be using yet)
     plotdf = plotdf.assign(intensity=0.2);
-    x = list(plotdf.itertuples())
-
-    return render_template('leaflet.html')
+    #data = list(plotdf.itertuples())
+    #data = plotdf.values.tolist()
+    data = plotdf[['MonitoredVehicleJourney_VehicleLocation_Latitude',
+                   'MonitoredVehicleJourney_VehicleLocation_Longitude']].values.tolist()
+    return render_template('leaflet.html', data=data)
 
 @app.route('/live_example')
 def live_example():

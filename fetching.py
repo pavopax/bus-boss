@@ -16,7 +16,9 @@ def _flatten_dict(root_key, nested_dict, flattened_dict):
     return flattened_dict
     
 
-params = {"key": MTA_API_KEY}
+params = {"key": MTA_API_KEY, "MaximumStopVisits":2}
+
+
 #This is useful for the live MTA Data
 def nyc_current():
     resp = requests.get(MTA_API_BASE, params=params).json()
