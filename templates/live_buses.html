@@ -36,26 +36,13 @@
      addressPoints = data.map(function (p) { return [p[0], p[1]]; });
 
      var heat = L.heatLayer(addressPoints).addTo(map);
-     /*
-      *     var heat = L.heatLayer([
-      *	 [40.815, -74.1, 0.9], // lat, lng, intensity
-      *	 [40.815, -74.2, 0.9],
-      *	 [40.915, -74.3, 0.8],
-      *	 [40.915, -74.3, 0.8],
-      *	 [40.915, -74.3, 0.8],
-      *	 [40.915, -74.3, 0.8],
-      *	 [40.915, -74.3, 0.8],
-      *	 [40.915, -74.3, 0.8],
-      *	 [40.915, -74.3, 10.8],
-      *	 [40.915, -74.3, 0.8]
-      *	], {radius: 25}).addTo(map);*/
 
      var popup = L.popup();
 
      function onMapClick(e) {
 	 popup
              .setLatLng(e.latlng)
-             .setContent("You clicked the map at " + e.latlng.toString())
+             .setContent("ITS A WIN! You clicked the map at " + e.latlng.toString())
              .openOn(map);
      }
 

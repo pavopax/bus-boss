@@ -13,8 +13,8 @@ def main():
 def index():
     return render_template('index.html')
 
-@app.route('/leaflet')
-def leaflet():
+@app.route('/live_buses')
+def live_buses():
 
     nyc = fetching.nyc_current()
 
@@ -28,7 +28,7 @@ def leaflet():
     #data = plotdf.values.tolist()
     data = plotdf[['MonitoredVehicleJourney_VehicleLocation_Latitude',
                    'MonitoredVehicleJourney_VehicleLocation_Longitude']].values.tolist()
-    return render_template('leaflet.html', data=data)
+    return render_template('live_buses.html', data=data)
 
 @app.route('/live_example')
 def live_example():
