@@ -4,6 +4,10 @@ import fetching                 # my fetching.py file
 
 app = Flask(__name__)
 
+app.config.update(
+    DEBUG=True,
+)
+
 
 @app.route('/')
 def main():
@@ -15,9 +19,7 @@ def index():
 
 @app.route('/live_buses')
 def live_buses():
-
     nyc = fetching.nyc_current()
-
     plotdf = nyc[['MonitoredVehicleJourney_PublishedLineName',
                   'MonitoredVehicleJourney_VehicleLocation_Latitude',
                   'MonitoredVehicleJourney_VehicleLocation_Longitude']]

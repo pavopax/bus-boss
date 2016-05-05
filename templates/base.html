@@ -3,54 +3,17 @@
     <head>
 	{% block head %}
 	<title>Ranking Countries{% block title %}{% endblock %}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="buses, boss!">
-	<meta name="keywords" content="best buses boss nyc carto">
-	<meta name="author" content="paul">
-	<meta charset="utf-8">
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<!-- <link href="{{ url_for('static', filename='css/bootstrap-custom.css') }}" rel="stylesheet"> -->
-
-	<link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
 	{% endblock %}
     </head>
     <body>
-	{% block navbar %}
-	<div class="navbar navbar-static-top navbar-default">
-	    <div class="container">
-		<a class="navbar-brand" href="/">Ranking Countries</a>
-		<div class="nav-collapse">
-		    {% block navbar_right %}
-		    <ul class="nav navbar-nav pull-right">
-			<li><a href="{{ url_for('index') }}">Home</a></li>
-			<!-- <li><a href="{{ url_for('explorer') }}">Data Explorer</a></li>
-			     <li><a href="{{ url_for('insights') }}">Insights</a></li>
-			     <li><a href="http://github.com/pavopax/ranking-countries" target="_blank">Code</a></li> -->
-		    </ul>
-		    {% endblock %}
-		</div><!--/.nav-collapse -->
-	    </div>
-	</div>
-	{% endblock %}
 	<div class="container page">
             <div class="content">
 		{% block content %}
 		{% endblock %}
 	    </div>
             <hr>
-            {% block footer %}
-            <footer class="footer" style="text-align:center">
-		<p>MMXVI</p>
-            </footer>
-            {% endblock %}
 	</div>
-	{% block js_footer %}
 
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	
-	{% endblock %}
     </body>
 </html>
