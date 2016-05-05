@@ -3,10 +3,8 @@ Bus Boss
 A quick visualization of some live NYC Bus data
 
 
-Details
-===============================================================================
-* Hosted on local machine
-* used virtualenv to setup minimal environment
+### Tech details:
+* hosted on local machine, used virtualenv to setup minimal environment
 * custom Bootstrap css hacks to center navbar
 * see useful docs and tech stack, below
 
@@ -14,7 +12,11 @@ Details
 Useful Docs
 ===============================================================================
 
-https://github.com/thedataincubator/flask-demo
+Fantastic resource to quickly deploy Heroku + Flask + Bootstrap:
+
+http://blog.shea.io/lightweight-python-apps-with-flask-twitter-bootstrap-and-heroku/
+
+Other useful guides:
 
 http://leafletjs.com/examples/quick-start.html
 
@@ -28,8 +30,9 @@ http://leaflet.github.io/Leaflet.heat/demo/  [use your browser's developer tools
 
 Tech Stack
 ===============================================================================
-* [heroku](https://www.heroku.com/)
+* [Heroku](https://www.heroku.com/)
 * [Flask](http://leafletjs.com)
+* [Boostrap](http://getbootstrap.com)
 * [Leaflet.js](http://leafletjs.com)
 * [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat)
 
