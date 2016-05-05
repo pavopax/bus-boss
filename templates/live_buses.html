@@ -21,7 +21,7 @@
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script src="{{ url_for('static', filename='js/leaflet-heat.js') }}"></script>
 <script>
- var map = L.map('mapid').setView([40.805, -74], 10);
+ var map = L.map('mapid').setView([40.805, -74], 8);
  
  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
