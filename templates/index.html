@@ -2,7 +2,11 @@
 {% block title %}{% endblock %}
 {% block content %}
 
-<h1>Buses, Boss!</h1>
-<p><a href="{{ url_for('live_buses') }}">Where are them buses, boss?!</a></p>
+<h1 class="h1center">Buses, Boss!</h1>
+
+<a href="{{ url_for('live_buses') }}">
+    <p style="text-align:center;">Where are them buses, boss?!</p>
+    <img src="{{ url_for('static', filename='img/bus.jpg') }}" class="centerImage" width="200">
+</a>
 
 {% endblock %}
