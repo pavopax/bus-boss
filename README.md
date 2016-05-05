@@ -2,7 +2,6 @@ Bus Boss
 ===============================================================================
 A quick visualization of some live NYC Bus data.
 
-See here:  
 http://bus-boss.herokuapp.com
 
 
