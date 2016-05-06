@@ -5,8 +5,7 @@ A quick visualization of some live NYC Bus data.
 http://bus-boss.herokuapp.com
 
 
-Tech details
-===============================================================================
+Setup:
 * hosted on local machine, used virtualenv to setup minimal environment
 * custom Bootstrap css hacks to center navbar
 * see useful docs and tech stack, below
