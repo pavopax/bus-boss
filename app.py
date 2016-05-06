@@ -9,6 +9,7 @@ app.config.update(
 )
 
 
+
 @app.route('/')
 def main():
     return render_template('index.html')
@@ -35,6 +36,21 @@ def live_buses():
 @app.route('/live_example')
 def live_example():
     return render_template('live_example.html')
+
+
+@app.route('/page1')
+def page1():
+  return redirect('/')
+
+@app.route('/page2')
+def page2():
+  return redirect('/')
+
+@app.route('/page3')
+def page3():
+  return redirect('/')
+
+
 
 
 if __name__ == '__main__':
