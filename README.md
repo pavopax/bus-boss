@@ -5,11 +5,16 @@ A quick visualization of some live NYC Bus data.
 http://bus-boss.herokuapp.com
 
 
-Tech details
+Tech stack
 ===============================================================================
-* hosted on local machine, used virtualenv to setup minimal environment
-* custom Bootstrap css hacks to center navbar
-* see useful docs and tech stack, below
+*hosted on local machine, used virtualenv to setup minimal environment*
+*custom Bootstrap css hacks to center navbar*
+* [Heroku](https://www.heroku.com/)
+* [Flask](http://leafletjs.com)
+* [Boostrap](http://getbootstrap.com)
+* [Leaflet.js](http://leafletjs.com)
+* [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat)
+* [Mapbox](https://www.mapbox.com)see useful docs and tech stack, below
 
 
 Useful Docs
@@ -27,12 +32,5 @@ Other useful guides:
 
 
 
-Tech Stack
-===============================================================================
-* [Heroku](https://www.heroku.com/)
-* [Flask](http://leafletjs.com)
-* [Boostrap](http://getbootstrap.com)
-* [Leaflet.js](http://leafletjs.com)
-* [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat)
-* [Mapbox](https://www.mapbox.com)
+
  
