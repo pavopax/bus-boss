@@ -15,7 +15,7 @@ Tech stack
 * [Boostrap](http://getbootstrap.com)
 * [Leaflet.js](http://leafletjs.com)
 * [Leaflet.heat](https://github.com/Leaflet/Leaflet.heat)
-* [Mapbox](https://www.mapbox.com)see useful docs and tech stack, below
+* [Mapbox](https://www.mapbox.com)
 
 
 Useful Docs
