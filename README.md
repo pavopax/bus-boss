@@ -7,7 +7,7 @@ http://bus-boss.herokuapp.com
 
 Tech stack
 ===============================================================================
-*hosted on local machine, used virtualenv to setup minimal environment*
+*developed on local machine, used virtualenv to setup minimal environment, then pushed to heroku*
 
 *custom Bootstrap css hacks to center navbar*
 * [Heroku](https://www.heroku.com/)
